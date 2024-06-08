@@ -3,18 +3,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import UserProfile from './user-profile';
 
-
 const Navbar = () => {
  
   return (
     <> 
-    <nav className=" bg-white rounded-lg bg-opacity-10 py-4 ">
+    <nav className=" bg-white rounded-lg m-4 bg-opacity-10 py-4 border">
       <div className="container mx-auto px-4">
         <ul className="flex space-x-4">
         <li>
             <Link
               to="/"
-              className="text-white hover:text-cyan-300 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-white hover:text-cyan-300 hover:underline px-3 py-2 rounded-md text-sm font-medium"
               >
               Home
             </Link>
@@ -22,7 +21,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/taskform"
-              className="text-white hover:text-cyan-300 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-white hover:text-cyan-300 hover:underline px-3 py-2 rounded-md text-sm font-medium"
               >
               Add Task
             </Link>
@@ -33,7 +32,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/tasks"
-              className="text-white hover:text-cyan-300 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-white hover:text-cyan-300 hover:underline px-3 py-2 rounded-md text-sm font-medium"
               >
              View Tasks
             </Link>
@@ -45,8 +44,8 @@ const Navbar = () => {
     <UserProfile/>
       </div>
     </nav>
-    
-              </>
+
+          </>
 
 
   );

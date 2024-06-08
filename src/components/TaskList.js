@@ -72,7 +72,7 @@ const TaskList = () => {
   };
 
   return (
-    <div className="bg-white bg-opacity-10 p-6 m-4 rounded-lg shadow-md">
+    <div className="bg-white bg-opacity-10 p-6 m-4 rounded-lg border-black-50 shadow-md">
       <h2 className="text-2xl text-white font-bold mb-4">Task List</h2>
       <div className="flex justify-between mb-4">
         <TaskSearch onSearch={handleSearch} />

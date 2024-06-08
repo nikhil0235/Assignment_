@@ -19,7 +19,6 @@ const UserProfile = () => {
       } else {
         // No user is signed in
         setUser(null);
-        localStorage.removeItem('user')
       }
     });
 

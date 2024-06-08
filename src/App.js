@@ -7,15 +7,16 @@ import TaskForm from './components/TaskForm';
 import Login from './components/Login';
 import Register from './components/Register';
 import img from './image/black.jpg'
-import Home from './components/Home';
+import Home from './components/Home'
+import Footer from './components/Footer';
 
 const App = () => {
   
   return (
-
-    <div style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh' }}>
-      <div className="container   p-4">
-        <Navbar />
+  <> 
+  <Navbar/>
+    <div  >
+      <div className="container">
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login />} />
@@ -25,6 +26,9 @@ const App = () => {
         </Routes>
       </div>
     </div>
+    <Footer/>
+      
+  </>
   
   );
 };

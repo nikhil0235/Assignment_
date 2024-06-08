@@ -22,8 +22,7 @@ const HomePage = () => {
             <li>Mark tasks as complete or pending</li>
             <li>Edit and delete tasks as needed</li>
             <li>Assign categories or labels to tasks for better organization</li>
-            <li>Receive reminders and notifications for upcoming or overdue tasks</li>
-            <li>Track your task progress and productivity with analytics and reporting</li>
+            <li>Track your task progress and productivity </li>
           </ul>
         </div>
       </div>

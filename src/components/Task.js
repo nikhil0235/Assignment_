@@ -12,7 +12,7 @@ const Task = ({ task, onUpdate, onDelete }) => {
 
 
   return (
-    <div className="bg-white bg-opacity-10 p-4 rounded-lg shadow-md">
+    <div className=" border p-4 rounded-lg shadow-md">
       <div className="flex justify-between items-center mb-2">
         <h3 className={`text-xl font-bold ${task.completed ? 'text-green-400' : 'text-white'}`}>
           {task.title}

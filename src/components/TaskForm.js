@@ -48,7 +48,7 @@ const TaskForm = () => {
   };
 
   return (
-    <div className=' bg-white rounded-lg bg-opacity-10 m-4'>  
+    <div className=' bg-white border rounded-lg bg-opacity-10 m-4'>  
 
     <form onSubmit={handleSubmit} className=" p-6 rounded-lg shadow-md">
       <div className="mb-4">

@@ -7,7 +7,7 @@ const TaskFilter = ({ onFilter }) => {
   };
 
   return (
-    <div className="bg-white bg-opacity-10 p-4  rounded-lg shadow-md">
+    <div className="border p-4  rounded-lg shadow-md">
       <h3 className="text-xl text-white font-bold mb-2">Filter Tasks</h3>
       <select
         onChange={handleFilter}
