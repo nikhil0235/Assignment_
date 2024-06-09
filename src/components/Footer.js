@@ -4,9 +4,9 @@ import { faInstagram, faLinkedin, faGithub, faSnapchat } from '@fortawesome/free
 
 const Footer = () => {
   return (
-    <footer className="bg-white bg-opacity-10 w-full text-white absolute -bottom-20  py-5">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-4">
-        <h2 className="text-2xl">Developed by Nikhil Raj</h2>
+    <footer className="bg-white bg-opacity-10 w-full text-white absolute bottom-0 md:-bottom-20 py-5">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+        <h2 className="text-lg md:text-2xl mb-4 md:mb-0">Developed by Nikhil Raj</h2>
         <div className="flex space-x-4">
           <a
             href="https://www.instagram.com/nikhil_rajput011/"

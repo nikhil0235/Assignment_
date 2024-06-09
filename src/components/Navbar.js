@@ -7,9 +7,9 @@ const Navbar = () => {
  
   return (
     <> 
-    <nav className=" bg-white rounded-lg m-4 bg-opacity-10 py-4 border">
-      <div className="container mx-auto px-4">
-        <ul className="flex space-x-4">
+    <nav className=" bg-white rounded-lg m-4   bg-opacity-10 py-4 border">
+      <div className="container mx-auto md:px-4">
+        <ul className="flex md:space-x-4 -space-x-2">
         <li>
             <Link
               to="/"

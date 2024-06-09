@@ -14,11 +14,11 @@ const UserProfile = () => {
       if (user) {
         // User is signed in
         setUser(user);
-        localStorage.setItem('user',user)
-        
+        localStorage.setItem("user", user);
       } else {
         // No user is signed in
         setUser(null);
+        localStorage.removeItem('user')
       }
     });
 
@@ -28,31 +28,31 @@ const UserProfile = () => {
   }, []);
 
   return (
-    <div className="flex w-60 absolute right-20  -top-10 translate-x-12">
+    <div className="flex w-60  right-0  absolute md:right-20   -top-10 translate-x-12">
       {user ? (
-        <div className="flex items-center space-x-2 font-bold text-white">
-         <FaUserAstronaut className="ml-2 text-xl text-white md:text-3xl" />
+        <div className="flex items-center space-x-2  translate-x-5 font-bold text-white">
+          <FaUserAstronaut className="ml-2 text-xl text-white md:text-3xl" />
           <p>{user.displayName}</p>
           <button
             onClick={() => signOut(auth)}
             className="inline-flex text-xl font-semibold text-white bg-orange-500 border-0 m-2 py-1 px-4 focus:outline-none hover:bg-orange-600 rounded"
           >
-            Logout <BiLogOut className="ml-2 -mr-1 text-xl text-white md:text-3xl" />
+            Logout{" "}
+            <BiLogOut className="ml-2 -mr-1 text-xl text-white md:text-3xl" />
           </button>
         </div>
       ) : (
         <div className="flex flex-row items-center m-2 font-bold text-white space-y-2 -translate-y-4">
-  <div className="py-2  rounded">
-    No user
-  </div>
-  <div className=" p-2 rounded">
-    <Link to={"/login"}>
-      <button className="inline-flex items-center text-xl text-white bg-green-500 border-0 mx-2 py-1 px-4 focus:outline-none hover:bg-green-600 rounded">
-        Login <BiLogInCircle className="ml-2 text-xl text-white md:text-3xl" />
-      </button>
-    </Link>
-  </div>
- </div>
+          <div className="py-2  rounded">No user</div>
+          <div className=" p-2 rounded">
+            <Link to={"/login"}>
+              <button className="inline-flex items-center text-xl text-white bg-green-500 border-0 mx-2 py-1 px-4 focus:outline-none hover:bg-green-600 rounded">
+                Login{" "}
+                <BiLogInCircle className="ml-2 text-xl text-white md:text-3xl" />
+              </button>
+            </Link>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -32,8 +32,6 @@ const TaskList = () => {
       // Redirect to login page if user is not logged in
      navigate('/login')
     }  
-    
-    
   }, []);
 
   // useEffect(() => {

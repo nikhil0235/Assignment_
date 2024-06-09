@@ -10,7 +10,7 @@ const TaskSearch = ({ onSearch }) => {
   };
 
   return (
-    <div className=" p-6  border rounded-lg shadow-md">
+    <div className=" m-2 p-6  border rounded-lg shadow-md">
       <h3 className="text-xl text-white font-bold mb-4">Search Tasks</h3>
       <input
         type="text"

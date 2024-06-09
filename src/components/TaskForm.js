@@ -15,8 +15,6 @@ const TaskForm = () => {
     if (!localStorage.getItem('user')) {
       navigate('/login')
     }  
-
-    
   }, []);
   
 

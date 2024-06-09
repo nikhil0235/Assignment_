@@ -3,9 +3,31 @@ import { useNavigate, Link } from 'react-router-dom';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from './firebase';
 import { BiLogIn } from 'react-icons/bi';
+
+
+
 const Login = () => {
   const [error, setError] = useState(false);
+  const[email,setEmail] =useState('');
+  const[password,setPassword] = useState();
+
   const navigate = useNavigate();
+
+  const handleGuestLogIn = async()=>{
+      
+      setEmail('guest@gmail.com');
+      setPassword(123456);
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/");
+    } catch (error) {
+      setError(true);
+    }
+    
+  }
+
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -32,9 +54,12 @@ const Login = () => {
           <input
             type="email"
             placeholder="Email"
+            value={email}
             className="w-full p-3 bg-white bg-opacity-10 rounded border appearance-none border-white-600 px-2 focus:outline-none focus:ring-2 focus:ring-cyan-200 focus:border-cyan-300  "
-          />
+        
+        />
           <input
+           value={password}
             type="password"
             placeholder="Password"
             className="w-full p-3 bg-white bg-opacity-10 rounded border appearance-none border-white-600 px-2 focus:outline-none focus:ring-2 focus:ring-cyan-200 focus:border-cyan-300"
@@ -44,6 +69,12 @@ const Login = () => {
             className="w-full py-3 font-semibold text-center bg-blue-400 text-white rounded hover:bg-blue-600 transition duration-200"
           >
             Sign in
+          </button>
+          <button
+            onClick={handleGuestLogIn}
+            className="w-full py-3 font-semibold text-center bg-green-500 text-white rounded hover:bg-green-600 transition duration-200"
+          >
+            Guest Credentials
           </button>
           {error && <span className="white " >Something Went Wrong</span>}
         </form>

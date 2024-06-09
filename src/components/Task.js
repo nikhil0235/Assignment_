@@ -26,10 +26,10 @@ const Task = ({ task, onUpdate, onDelete }) => {
       <p className="text-white mb-4">{task.description}</p>
       <div className="flex justify-between items-center">
         <p className=" text-white text-sm">Due: {task.dueDate}</p>
-        <div>
+        <div className='flex '>
           <button
             onClick={handleComplete}
-            className={`px-4 py-2 rounded-md font-semibold focus:outline-none ${
+            className={ ` px-2 md:px-4 py-2 rounded-md font-semibold focus:outline-none ${
               task.completed ? 'bg-green-500 hover:bg-green-600' : 'bg-blue-400 hover:bg-blue-500'
             }`}
           >
@@ -37,7 +37,7 @@ const Task = ({ task, onUpdate, onDelete }) => {
           </button>
           <button
             onClick={handleDelete}
-            className="ml-2 px-4 py-2 bg-red-500  text-white rounded-md hover:bg-red-600 focus:outline-none"
+            className=" ml-1 md:ml-2 px-1 md:px-4 md:py-2  bg-red-500  text-white rounded-md hover:bg-red-600 focus:outline-none"
           >
             Delete
           </button>
